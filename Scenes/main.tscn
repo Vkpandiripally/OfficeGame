@@ -1,5 +1,10 @@
-[gd_scene format=3 uid="uid://dsexqsm6djiys"]
+[gd_scene load_steps=2 format=3 uid="uid://dsexqsm6djiys"]
+
+[ext_resource type="Texture2D" uid="uid://ds4mbj14fx4o1" path="res://Sprites/trump_mugshot.jpg" id="1_kdn77"]
 
 [node name="Main" type="Node"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 325)
+scale = Vector2(1.12207, 0.628906)
+texture = ExtResource("1_kdn77")
