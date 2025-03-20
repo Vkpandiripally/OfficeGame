@@ -13,4 +13,4 @@ script = ExtResource("1_6xyex")
 texture = ExtResource("1_24bpn")
 
 [node name="Node2D" type="Node2D" parent="gun_character"]
-position = Vector2(26, -11)
+position = Vector2(26, -9)
