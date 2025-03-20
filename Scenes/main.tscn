@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsexqsm6djiys"]
+[gd_scene load_steps=3 format=3 uid="uid://dsexqsm6djiys"]
 
-[ext_resource type="Texture2D" uid="uid://ds4mbj14fx4o1" path="res://Sprites/trump_mugshot.jpg" id="1_kdn77"]
+[ext_resource type="PackedScene" uid="uid://cv7rtvj7p80c0" path="res://Scenes/player.tscn" id="2_s12rn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gmk18"]
 
 [node name="Main" type="Node"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576.5, 325)
+modulate = Color(0.374139, 0.374139, 0.374139, 1)
+position = Vector2(576, 324)
 scale = Vector2(1.12207, 0.628906)
-texture = ExtResource("1_kdn77")
+texture = SubResource("CanvasTexture_gmk18")
+
+[node name="Player" parent="." instance=ExtResource("2_s12rn")]
+position = Vector2(580, 332)
