@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cv7rtvj7p80c0"]
 
 [ext_resource type="Texture2D" uid="uid://dx1oaeu2mssdq" path="res://Sprites/placeholderGuy.png" id="1_737va"]
-[ext_resource type="Script" path="res://Scenes/player.gd" id="1_xbtne"]
+[ext_resource type="Script" uid="uid://bpshmmgsmugcn" path="res://Scenes/player.gd" id="1_xbtne"]
 [ext_resource type="PackedScene" uid="uid://dmsewsk3otcdb" path="res://Scenes/gun.tscn" id="3_ceold"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pgjbo"]

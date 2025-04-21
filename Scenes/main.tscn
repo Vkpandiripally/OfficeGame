@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsexqsm6djiys"]
+[gd_scene load_steps=6 format=3 uid="uid://dsexqsm6djiys"]
 
 [ext_resource type="Texture2D" uid="uid://byc0t2cwqkxt2" path="res://Sprites/testBackgroundNBG.png" id="1_5jh2u"]
 [ext_resource type="PackedScene" uid="uid://cv7rtvj7p80c0" path="res://Scenes/player.tscn" id="2_s12rn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
+size = Vector2(50, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gbba"]
+size = Vector2(47.5, 53)
+
+[sub_resource type="TileSet" id="TileSet_jjvhh"]
 
 [node name="Main" type="Node"]
 
@@ -12,6 +20,24 @@ scale = Vector2(2.02428, 1.65207)
 texture = ExtResource("1_5jh2u")
 
 [node name="Player" parent="." instance=ExtResource("2_s12rn")]
-position = Vector2(1480, 931)
+position = Vector2(1462, 991)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(3, 19)
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PackedVector2Array(188, 992, 186, 468, 955, 468, 987, 475, 998, 631, 936, 632, 929, 790, 946, 815, 1086, 818, 1104, 817, 1101, 698, 1327, 703, 1357, 703, 1373, 434, 1031, 438, 1035, 197, 1210, 197, 1203, 41, 1793, 50, 1800, 186, 1965, 191, 1970, 423, 1639, 434, 1644, 703, 2009, 714, 2009, 468, 2296, 487, 2309, 886, 2523, 891, 2525, 958, 2587, 958, 2590, 1208, 2463, 1198, 2459, 1279, 2188, 1268, 2187, 1398, 1841, 1405, 1834, 1263, 654, 1277, 649, 994, 199, 992, 243, 1545, 2865, 1563, 2621, 136, 1547, -46, 38, 209, -113, 1745)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(604, 615)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(2264, 926)
+shape = SubResource("RectangleShape2D_8gbba")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_jjvhh")
+format = 2

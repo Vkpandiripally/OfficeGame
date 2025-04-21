@@ -7,6 +7,8 @@ extends CharacterBody2D
 var direction: Vector2
 
 
+
+
 func _physics_process(delta: float) -> void:
 	# rotate gun around player
 	#pivot.look_at(get_global_mouse_position())
@@ -30,3 +32,4 @@ func _physics_process(delta: float) -> void:
 		#if %sprite.animation != "Idle": %sprite.animation = "Idle"
 
 	move_and_slide()
+	
